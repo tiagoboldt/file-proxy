@@ -14,7 +14,7 @@ def gen():
     first = True
     while True:
         with requests.get(url, stream=True, timeout=60) as r:
-            for chunk in r.iter_content(chunk_size=1024*50):
+            for chunk in r.iter_content(chunk_size=1024*25):
                 if first:
                     first = False
                     print(chunk)
